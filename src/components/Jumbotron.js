@@ -9,7 +9,8 @@ const Styles = styled.div`
         height: 78vh;
         margin-left: 4vw;
         margin-right: 4vw;
-        margin-top: 16vh;
+        margin-top: 17vh;
+        // position: relative;
         margin-bottom: 10vh;
         align-text: center;
     }
