@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Home } from './Home';
+import { NoMatch } from './NoMatch';
+import { Layout } from './components/Layout';
+import { NavigationBar } from './components/Navbar/NavigationBar';
+import { Jumbotron } from './components/Jumbotron'
+
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <NavigationBar/>
+        <Layout>
+          <Jumbotron/>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route component={NoMatch} />
+            </Switch>
+          </Router>
+        </Layout>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
