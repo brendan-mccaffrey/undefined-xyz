@@ -23,6 +23,7 @@ const Styles = styled.div`
 
     #mycenter {
         text-align: center;
+        justify-content: center;
     }
 
     #bannerlogo {
@@ -36,7 +37,7 @@ const Styles = styled.div`
         flexShrink: 1;
         color: #fff;
         font-family: 'Spectral', sans-serif;
-        font-size: 3em;
+        font-size: 3.5vw;
     }
 
     #bannersubtext {
@@ -44,9 +45,20 @@ const Styles = styled.div`
         flexShrink: 1;
         color: #fff;
         font-family: 'Noto Sans 400 Italic 400', sans-serif;
-        font-size: 1em;
+        font-size: 1.6vw;
         font-style: italic;
-        font-weight: 100;
+        font-weight: lighter;
+        color: rgba(255,255,255,.7);
+        letter-spacing: .03em;
+    }
+
+    // #bannerbox {
+    //     margin-top
+    // }
+
+    #bannersubbox {
+        width: 65%;
+        margin: auto;
     }
 `;
 
@@ -65,12 +77,16 @@ export const Jumbotron = () => (
                     <img id="bannerlogo" src={logo} alt="Undefined"/>
                 </div>
                 <div id="mycenter">
-                    <p id="bannertext">
-                        Our mandate is flexible, limitless, and simply, UNDEFINED.
-                    </p>
-                    <p id="bannersubtext">
-                        We are cross-asset, stage-agnostic investors applying creativity and unique insights to generate alpha accross the globe.
-                    </p>
+                    <div id="bannerbox">
+                        <p id="bannertext">
+                            Our mandate is flexible, limitless, and simply, UNDEFINED.
+                        </p>
+                    </div>
+                    <div id="bannersubbox">
+                        <p id="bannersubtext">
+                            We are cross-asset, stage-agnostic investors applying creativity and unique insights to generate alpha accross the globe.
+                        </p>
+                    </div>
                 </div>
             </Container>
         </Jumbo>
