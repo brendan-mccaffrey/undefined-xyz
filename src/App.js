@@ -11,6 +11,7 @@ import { Footer } from './components/Footer';
 import { Team } from './components/Team';
 
 class App extends Component {
+
   render() {
     return (
       <React.Fragment>
@@ -21,8 +22,7 @@ class App extends Component {
           <Team/>
           <Router>
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={Team} />
+              <Route exact path='/' component={Home} />
               <Route component={NoMatch} />
             </Switch>
           </Router>

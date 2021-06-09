@@ -60,6 +60,7 @@ const Styles = styled.div`
 
 export const Team = () => (
     <Styles>
+        <div id="team">
         <h1 id="team-header">Our Team</h1>
         <Container fluid id="team-section">
             <Row>
@@ -91,6 +92,7 @@ export const Team = () => (
                 </Col>
             </Row>
         </Container>
+        </div>
     </Styles>
 )
 

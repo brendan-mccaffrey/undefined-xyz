@@ -66,7 +66,7 @@ const Styles = styled.div`
 
 export const Jumbotron = () => (
     <Styles>
-        <Jumbo fluid className="jumbo">
+        <Jumbo fluid id="about" className="jumbo">
             {/* <div className="overlay"> */}
                 {/* <Jumbo fluid className="jumbo2">
                     <Container>

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
-// import { NavMenu, Bars, NavBtn, NavBtnLink } from './index.js';
+import { Link } from "react-scroll";
 
 import "../../../node_modules/jquery/dist/jquery.min.js";
 import "../../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 import logo from '../../assets/logo-lettering-black-highres.png';
+
 
 const Styles = styled.div`
     
@@ -82,21 +83,57 @@ export const NavigationBar = () => (
             <Navbar.Toggle id="myburger"/>
             <Navbar.Collapse id="mycollapse">
             <Nav className="ml-auto">
-                {/* <NavMenu> */}
-                    {/* <Nav.Item id="myitem"><Nav.Link href="/">ABOUT</Nav.Link></Nav.Item>
-                    <Nav.Item id="myitem"><Nav.Link href="/">PORTFOLIO</Nav.Link></Nav.Item>
-                    <Nav.Item id="myitem"><Nav.Link href="/">TEAM</Nav.Link></Nav.Item>
-                    <Nav.Item id="myitem"><Nav.Link href="/">CONTACT</Nav.Link></Nav.Item> */}
-                    <Nav.Link activeStyle id="myitem" href="/">ABOUT</Nav.Link>
-                    <Nav.Link activeStyle id="myitem" href="/">PORTFOLIO</Nav.Link>
-                    <Nav.Link activeStyle id="myitem" href="/">TEAM</Nav.Link>
-                    <Nav.Link activeStyle id="myitem" href="/">CONTACT</Nav.Link>
-                {/* </NavMenu> */}
+                {/* <Nav.Item id="myitem"><Nav.Link href="/">ABOUT</Nav.Link></Nav.Item>
+                <Nav.Item id="myitem"><Nav.Link href="/">PORTFOLIO</Nav.Link></Nav.Item>
+                <Nav.Item id="myitem"><Nav.Link href="/">TEAM</Nav.Link></Nav.Item>
+                <Nav.Item id="myitem"><Nav.Link href="/">CONTACT</Nav.Link></Nav.Item> */}
+                <Link className="link"
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={750}>
+                        <Nav.Link activeStyle id="myitem" >ABOUT</Nav.Link>
+                </Link>
+                <Link className="link"
+                    activeClass="active"
+                    to="portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={750}>
+                    <Nav.Link activeStyle id="myitem" href="/portolfio">PORTFOLIO</Nav.Link>
+                </Link>
+                <Link className="link"
+                    activeClass="active"
+                    to="team"
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={750}>
+                    <Nav.Link activeStyle id="myitem" href="/team">TEAM</Nav.Link>
+                </Link>
+                <Link className="link"
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-150}
+                    duration={750}>
+                    <Nav.Link activeStyle id="myitem" to="/contact">CONTACT</Nav.Link>
+                </Link>     
             </Nav>
             </Navbar.Collapse>
         </Navbar>
     </Styles>
 )
+
+// export const aboutRef = useRef()
+
+// export function handleAboutClick() {
+//     aboutRef.current.scrollIntoView({ behavior: 'smooth' })
+// }
 
 // export const NavigationBar = () => (
 //     <Styles>

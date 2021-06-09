@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Jumbotron as Container } from 'react-bootstrap';
 import { Row, Col, Button } from 'react-bootstrap';
-import { Overlay } from 'react-bootstrap/Overlay';
 
 import map from '../assets/landmarked-map.svg';
 import stripe from '../assets/investments/stripe.png';
@@ -162,6 +161,7 @@ const Styles = styled.div`
 export const Portfolio = () => (
     
     <Styles>
+        <div id="portfolio">
         <h1 id="portfolio-header">Portfolio</h1>
         <Container id="portfolio-section">
             <div id="mycenter">
@@ -241,8 +241,8 @@ export const Portfolio = () => (
                 </Col>
             </Row>
         </Container>
-
-
+        </div>
+        
     </Styles>
     
 )

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Nav, Navbar, Form, Button, Col, Row } from 'react-bootstrap';
+import { Nav, Navbar, Form, Button, Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 import "../../node_modules/jquery/dist/jquery.min.js";
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
@@ -93,39 +94,63 @@ const Styles = styled.div`
 
 `;
 
+const popover = (
+    <Popover id="popover-basic">
+      <Popover.Title as="h3">Success!</Popover.Title>
+    </Popover>
+  );
+
 export const Footer = () => (
-        <Styles>
-        <Navbar collapseOnSelect expand="lg"> 
-        <Navbar.Collapse>
-            <Nav>
-                
-                <Navbar.Brand href="/">
-                    <img src={logo} alt="Undefined"/>
-                </Navbar.Brand>
-                
-            </Nav>
-            </Navbar.Collapse>
-            <Form className="ml-auto" id="myform">
-                <h1 id="contact-header">Contact Us</h1>
-                <Form.Group as={Row}>
-                    <Col><Form.Control placeholder="First Name"/></Col>
-                    <Col><Form.Control placeholder="Last Name"/></Col>
-                </Form.Group>
-                <Form.Group controlId="formGroupEmail">
-                    <Form.Control type="email" placeholder="Email Address" />
-                </Form.Group>
-                <Form.Group controlId="formGroupTextarea">
-                    <Form.Control style={{maxHeight: "25vh", minHeight: "4.5vh"}} as={"textarea"} rows={3} placeholder="Message" />
-                </Form.Group>
-                <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="light" type="submit">
-                    Submit
-                </Button>
-            </Form>
-        </Navbar>
+    <Styles>
+        <div id="contact">
+            <Navbar collapseOnSelect expand="lg"> 
+                <Navbar.Collapse>
+                    <Nav>
+                        <Navbar.Brand href="/">
+                            <img src={logo} alt="Undefined"/>
+                        </Navbar.Brand>
+                    </Nav>
+                </Navbar.Collapse>
+                <Form className="ml-auto" id="myform" onSubmit={sendEmail}>
+                    <h1 id="contact-header">Contact Us</h1>
+                    <Form.Group as={Row}>
+                        <Col><Form.Control style={{border: "3px solid white", background: "#000", color: "#fff"}} placeholder="First Name" name="first_name" /></Col>
+                        <Col><Form.Control style={{border: "3px solid white", background: "#000", color: "#fff"}} placeholder="Last Name" name="last_name" /></Col>
+                    </Form.Group>
+                    <Form.Group controlId="formGroupEmail">
+                        <Form.Control style={{border: "3px solid white", background: "#000", color: "#fff"}} type="email" name="email" placeholder="Email Address" />
+                    </Form.Group>
+                    <Form.Group controlId="formGroupTextarea">
+                        <Form.Control style={{border: "3px solid white", background: "#000", color: "#fff", 
+                        maxHeight: "25vh", minHeight: "4.5vh"}} as={"textarea"} rows={3} placeholder="Message" name="message" />
+                    </Form.Group>
+                    <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Check Me" required/>
+                    </Form.Group>
+                    <OverlayTrigger
+                        trigger='click'
+                        placement={'right'}
+                        overlay={popover}>
+                        <Button variant="light" type="submit">
+                        Submit
+                    </Button>
+                    </OverlayTrigger>
+                </Form>
+            </Navbar>
+        </div>
     </Styles>
 )
 
+
+export default function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_ns0mlir', 'template_rcc3v07', e.target, 'user_koeIGXdTYvPfgIPcMG8uq')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    e.target.reset()
+};
 
