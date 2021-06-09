@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/undefined-xyz/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/undefined-xyz/static/js/main.8061abb2.chunk.js",
+    "main.js.map": "/undefined-xyz/static/js/main.8061abb2.chunk.js.map",
+    "runtime-main.js": "/undefined-xyz/static/js/runtime-main.45676904.js",
+    "runtime-main.js.map": "/undefined-xyz/static/js/runtime-main.45676904.js.map",
+    "static/js/2.ab7f4b16.chunk.js": "/undefined-xyz/static/js/2.ab7f4b16.chunk.js",
+    "static/js/2.ab7f4b16.chunk.js.map": "/undefined-xyz/static/js/2.ab7f4b16.chunk.js.map",
+    "static/js/3.e9d03620.chunk.js": "/undefined-xyz/static/js/3.e9d03620.chunk.js",
+    "static/js/3.e9d03620.chunk.js.map": "/undefined-xyz/static/js/3.e9d03620.chunk.js.map",
+    "index.html": "/undefined-xyz/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/undefined-xyz/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.ab7f4b16.chunk.js.LICENSE.txt": "/undefined-xyz/static/js/2.ab7f4b16.chunk.js.LICENSE.txt",
+    "static/media/bytedance.68f58648.png": "/undefined-xyz/static/media/bytedance.68f58648.png",
+    "static/media/clover-health.e0154006.jpeg": "/undefined-xyz/static/media/clover-health.e0154006.jpeg",
+    "static/media/coinbase.a6b6ecf4.png": "/undefined-xyz/static/media/coinbase.a6b6ecf4.png",
+    "static/media/connor.2d15905b.jpg": "/undefined-xyz/static/media/connor.2d15905b.jpg",
+    "static/media/eva.693c4f6d.jpg": "/undefined-xyz/static/media/eva.693c4f6d.jpg",
+    "static/media/instacart.8f4290f8.svg": "/undefined-xyz/static/media/instacart.8f4290f8.svg",
+    "static/media/kraken.cd74a6a1.png": "/undefined-xyz/static/media/kraken.cd74a6a1.png",
+    "static/media/landmarked-map.e9554824.svg": "/undefined-xyz/static/media/landmarked-map.e9554824.svg",
+    "static/media/logo-0-white-highres.54b2faac.png": "/undefined-xyz/static/media/logo-0-white-highres.54b2faac.png",
+    "static/media/logo-lettering-black-highres.b694f310.png": "/undefined-xyz/static/media/logo-lettering-black-highres.b694f310.png",
+    "static/media/logo-lettering-white-highres.bc9ed363.png": "/undefined-xyz/static/media/logo-lettering-white-highres.bc9ed363.png",
+    "static/media/matt.dadbf560.jpg": "/undefined-xyz/static/media/matt.dadbf560.jpg",
+    "static/media/otis.ca708f1e.png": "/undefined-xyz/static/media/otis.ca708f1e.png",
+    "static/media/stripe.f0beea50.png": "/undefined-xyz/static/media/stripe.f0beea50.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45676904.js",
+    "static/js/2.ab7f4b16.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.8061abb2.chunk.js"
+  ]
+}
