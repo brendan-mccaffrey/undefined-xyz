@@ -8,6 +8,7 @@ import { NavigationBar } from './components/Navbar/NavigationBar';
 import { Jumbotron } from './components/Jumbotron'
 import { Portfolio } from './components/Portfolio';
 import { Footer } from './components/Footer';
+import { Team } from './components/Team';
 
 class App extends Component {
   render() {
@@ -17,9 +18,11 @@ class App extends Component {
         <Layout>
           <Jumbotron/>
           <Portfolio/>
+          <Team/>
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={Team} />
               <Route component={NoMatch} />
             </Switch>
           </Router>

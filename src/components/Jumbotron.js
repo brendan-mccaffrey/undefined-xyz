@@ -27,9 +27,9 @@ const Styles = styled.div`
     }
 
     #bannerlogo {
-        width: 10vw;
+        width: max(10vw, 18vh);
         z-index: 30;
-        margin-top: 7vh;
+        margin-top: 1vw;
     }
 
     #bannertext {
@@ -37,7 +37,8 @@ const Styles = styled.div`
         flexShrink: 1;
         color: #fff;
         font-family: 'Spectral', sans-serif;
-        font-size: 3.5vw;
+        font-size: min(3em, 3.5vw);
+        margin-top: calc(6vh - 1vw);
     }
 
     #bannersubtext {
@@ -45,11 +46,12 @@ const Styles = styled.div`
         flexShrink: 1;
         color: #fff;
         font-family: 'Noto Sans 400 Italic 400', sans-serif;
-        font-size: 1.6vw;
+        font-size: min(1.3em, 1.6vw);
         font-style: italic;
         font-weight: lighter;
         color: rgba(255,255,255,.7);
         letter-spacing: .03em;
+        margin-top: calc(6vh - 1vw);
     }
 
     // #bannerbox {

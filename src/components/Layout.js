@@ -4,11 +4,14 @@ import Container from 'react-bootstrap/Container';
 
 
 const Styles = styled.div`
-	
+	#content-holder {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
 `;
 
 export const Layout = (props) => (
-	<Container fluid>
+	<Container id="content-holder" fluid>
 		{props.children}
 	</Container>
 	) 

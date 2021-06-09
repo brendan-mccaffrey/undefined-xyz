@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 // import { NavMenu, Bars, NavBtn, NavBtnLink } from './index.js';
 
