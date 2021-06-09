@@ -75,7 +75,7 @@ const Styles = styled.div`
     }
 
     #myform {
-        margin-right: 10vw;
+        // margin-right: 5vw;
         margin-bottom: 10vh;
     }
 
@@ -96,11 +96,15 @@ const Styles = styled.div`
 export const Footer = () => (
         <Styles>
         <Navbar collapseOnSelect expand="lg"> 
+        <Navbar.Collapse>
             <Nav>
+                
                 <Navbar.Brand href="/">
                     <img src={logo} alt="Undefined"/>
                 </Navbar.Brand>
+                
             </Nav>
+            </Navbar.Collapse>
             <Form className="ml-auto" id="myform">
                 <h1 id="contact-header">Contact Us</h1>
                 <Form.Group as={Row}>
