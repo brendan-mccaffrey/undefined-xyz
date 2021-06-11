@@ -25,11 +25,6 @@ const Styles = styled.div`
         margin: auto;
         margin-top: 5vh;
     }
-
-    #bannersublogo {
-        width: 20vw;
-        margin-top: 0;
-    }
 `;
 
 export const Landing = () => (
