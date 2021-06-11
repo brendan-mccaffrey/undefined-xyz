@@ -76,20 +76,26 @@ export const Team = () => (
                     </Button> 
                     <p id="name">CONNOR LIN</p>
                 </Col>
-            </Row>
-            <Row>
                 <Col id="mycenter">
                     <Button id="member-button" variant="outline-none">
                         <img id="member" src={matt} alt='Matt' />
                     </Button>
                     <p id="name">MATT SHERMAN</p>
                 </Col>
-                <Col id="mycenter">
+            </Row>
+            <Row>
+                {/* <Col id="mycenter">
+                    <Button id="member-button" variant="outline-none">
+                        <img id="member" src={matt} alt='Matt' />
+                    </Button>
+                    <p id="name">MATT SHERMAN</p>
+                </Col> */}
+                {/* <Col id="mycenter">
                     <Button id="member-button" variant="outline-none">
                         <img id="member" src={eva} alt='Eva' />
                     </Button> 
                     <p id="name">EVA WENG</p>
-                </Col>
+                </Col> */}
             </Row>
         </Container>
         </div>
