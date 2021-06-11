@@ -26,7 +26,7 @@ class App extends Component {
     // document.addEventListener("click", this.setState({landing: false}));
     setTimeout(() => {
       this.setState({landing: false});
-    }, 3000); // 1000ms = 1 second
+    }, 5000); // 1000ms = 1 second
   }
 
   render() {
