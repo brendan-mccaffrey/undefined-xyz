@@ -92,6 +92,10 @@ const Styles = styled.div`
         maxHeight: 30vh;
     }
 
+    .btn.btn-square {
+        border-radius: 0;
+    }
+
 `;
 
 const popover = (
@@ -131,7 +135,7 @@ export const Footer = () => (
                         trigger='click'
                         placement={'right'}
                         overlay={popover}>
-                        <Button variant="light" type="submit">
+                        <Button className="btn btn-square" variant="light" type="submit">
                         Submit
                     </Button>
                     </OverlayTrigger>

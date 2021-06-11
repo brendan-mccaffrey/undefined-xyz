@@ -9,10 +9,37 @@ import { Jumbotron } from './components/Jumbotron'
 import { Portfolio } from './components/Portfolio';
 import { Footer } from './components/Footer';
 import { Team } from './components/Team';
+import { Landing } from './components/Landing';
+
+
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      landing: true
+    }
+  }
+
+  componentDidMount() {
+    // document.addEventListener("click", this.setState({landing: false}));
+    setTimeout(() => {
+      this.setState({landing: false});
+    }, 3000); // 1000ms = 1 second
+  }
+
   render() {
+
+    if (this.state.landing) {
+      return (
+        <React.Fragment>
+          <Landing/>
+        </React.Fragment>
+      )
+    }
+
+
     return (
       <React.Fragment>
         <NavigationBar/>
@@ -32,5 +59,9 @@ class App extends Component {
     );
   }
 }
+
+
+
+
 
 export default App;
