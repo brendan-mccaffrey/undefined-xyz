@@ -24,7 +24,6 @@ const Styles = styled.div`
         z-index: 30;
         margin: auto;
         margin-top: 5vh;
-        margin-bottom: 0;
     }
 
     #bannersublogo {
