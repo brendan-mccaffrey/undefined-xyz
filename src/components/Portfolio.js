@@ -161,7 +161,7 @@ const Styles = styled.div`
 export const Portfolio = () => (
     
     <Styles>
-        <div id="portfolio">
+        {/* <div id="portfolio"> */}
         <h1 id="portfolio-header">Portfolio</h1>
         <Container id="portfolio-section">
             <div id="mycenter">
@@ -177,7 +177,7 @@ export const Portfolio = () => (
                 
             </div>
         </Container>
-
+        <div id="portfolio">
         <h2 id="investments-header">Select Investments</h2>
         <Container fluid id="investment-section">
             <Row>

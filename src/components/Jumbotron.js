@@ -8,9 +8,11 @@ import logo from '../assets/logo-0-white-highres.png';
 const Styles = styled.div`
     .jumbo {
         background: #000;
-        height: 78vh;
-        margin-left: 4vw;
-        margin-right: 4vw;
+        height: 83vh;
+        // margin-left: 4vw;
+        // margin-right: 4vw;
+        margin-left: -.8vw;
+        margin-right: -.8vw;
         margin-top: 17vh;
         // position: relative;
         margin-bottom: 10vh;

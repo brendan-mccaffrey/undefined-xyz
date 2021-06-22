@@ -26,7 +26,7 @@ const Styles = styled.div`
 
     .navbar-brand>img {
         margin-top: -10px;
-        width: min(40vw, 400px);
+        width: min(36vw, 360px);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -55,7 +55,8 @@ const Styles = styled.div`
     .navbar-light .navbar-nav .nav-link {
         color: #000;
         font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
-        font-weight: 505;  
+        font-weight: 400;  
+        font-size: 1.1vw;
         align-items: center;  
     } 
 
@@ -83,18 +84,31 @@ export const NavigationBar = () => (
             <Navbar.Toggle id="myburger"/>
             <Navbar.Collapse id="mycollapse">
             <Nav className="ml-auto">
-                {/* <Nav.Item id="myitem"><Nav.Link href="/">ABOUT</Nav.Link></Nav.Item>
-                <Nav.Item id="myitem"><Nav.Link href="/">PORTFOLIO</Nav.Link></Nav.Item>
-                <Nav.Item id="myitem"><Nav.Link href="/">TEAM</Nav.Link></Nav.Item>
-                <Nav.Item id="myitem"><Nav.Link href="/">CONTACT</Nav.Link></Nav.Item> */}
-                <Link className="link"
+            <Link to="about"
+                smooth={true}
+                offset={-170}
+                duration={750}><Nav.Link id="myitem">ABOUT</Nav.Link></Link>
+            <Link to="portfolio"
+                smooth={true}
+                offset={-170}
+                duration={750}><Nav.Link id="myitem">PORTFOLIO</Nav.Link></Link>
+            <Link to="team"
+                smooth={true}
+                offset={-170}
+                duration={750}><Nav.Link id="myitem">TEAM</Nav.Link></Link>
+            <Link to="contact"
+                smooth={true}
+                offset={-170}
+                duration={750}><Nav.Link id="myitem">CONTACT</Nav.Link></Link>
+                
+                {/* <Link className="link"
                     activeClass="active"
                     to="about"
                     spy={true}
                     smooth={true}
                     offset={-150}
                     duration={750}>
-                        <Nav.Link activeStyle id="myitem" >ABOUT</Nav.Link>
+                        <Nav.Link id="myitem" >ABOUT</Nav.Link>
                 </Link>
                 <Link className="link"
                     activeClass="active"
@@ -103,7 +117,7 @@ export const NavigationBar = () => (
                     smooth={true}
                     offset={-150}
                     duration={750}>
-                    <Nav.Link activeStyle id="myitem" href="/portolfio">PORTFOLIO</Nav.Link>
+                    <Nav.Link id="myitem" href="/portolfio">PORTFOLIO</Nav.Link>
                 </Link>
                 <Link className="link"
                     activeClass="active"
@@ -112,7 +126,7 @@ export const NavigationBar = () => (
                     smooth={true}
                     offset={-150}
                     duration={750}>
-                    <Nav.Link activeStyle id="myitem" href="/team">TEAM</Nav.Link>
+                    <Nav.Link id="myitem" href="/team">TEAM</Nav.Link>
                 </Link>
                 <Link className="link"
                     activeClass="active"
@@ -121,48 +135,11 @@ export const NavigationBar = () => (
                     smooth={true}
                     offset={-150}
                     duration={750}>
-                    <Nav.Link activeStyle id="myitem" to="/contact">CONTACT</Nav.Link>
-                </Link>     
+                    <Nav.Link id="myitem" to="/contact">CONTACT</Nav.Link>
+                </Link>      */}
             </Nav>
             </Navbar.Collapse>
         </Navbar>
     </Styles>
 )
-
-// export const aboutRef = useRef()
-
-// export function handleAboutClick() {
-//     aboutRef.current.scrollIntoView({ behavior: 'smooth' })
-// }
-
-// export const NavigationBar = () => (
-//     <Styles>
-//         <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
-//             <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-//             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//             <Navbar.Collapse id="responsive-navbar-nav">
-//                 <Nav className="mr-auto">
-//                 <Nav.Link href="#features">Features</Nav.Link>
-//                 <Nav.Link href="#pricing">Pricing</Nav.Link>
-//                 <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-//                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-//                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-//                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-//                     <NavDropdown.Divider />
-//                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-//                 </NavDropdown>
-//                 </Nav>
-//                 <Nav>
-//                 <Nav.Link href="#deets">More deets</Nav.Link>
-//                 <Nav.Link eventKey={2} href="#memes">
-//                     Dank memes
-//                 </Nav.Link>
-//                 </Nav>
-//             </Navbar.Collapse>
-//             </Navbar>
-//     </Styles>
-// )
-
-
-
 

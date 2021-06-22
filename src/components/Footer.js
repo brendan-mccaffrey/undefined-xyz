@@ -108,28 +108,28 @@ export const Footer = () => (
     <Styles>
         <div id="contact">
             <Navbar collapseOnSelect expand="lg"> 
-                <Navbar.Collapse>
+                {/* <Navbar.Collapse>
                     <Nav>
                         <Navbar.Brand href="/">
                             <img src={logo} alt="Undefined"/>
                         </Navbar.Brand>
                     </Nav>
-                </Navbar.Collapse>
+                </Navbar.Collapse> */}
                 <Form className="ml-auto" id="myform" onSubmit={sendEmail}>
                     <h1 id="contact-header">Contact Us</h1>
                     <Form.Group as={Row}>
-                        <Col><Form.Control style={{border: "3px solid white", background: "#000", color: "#fff"}} placeholder="First Name" name="first_name" /></Col>
-                        <Col><Form.Control style={{border: "3px solid white", background: "#000", color: "#fff"}} placeholder="Last Name" name="last_name" /></Col>
+                        <Col><Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} placeholder="First Name" name="first_name" /></Col>
+                        <Col><Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} placeholder="Last Name" name="last_name" /></Col>
                     </Form.Group>
                     <Form.Group controlId="formGroupEmail">
-                        <Form.Control style={{border: "3px solid white", background: "#000", color: "#fff"}} type="email" name="email" placeholder="Email Address" />
+                        <Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} type="email" name="email" placeholder="Email Address" />
                     </Form.Group>
                     <Form.Group controlId="formGroupTextarea">
-                        <Form.Control style={{border: "3px solid white", background: "#000", color: "#fff", 
+                        <Form.Control style={{border: "1px solid white", background: "#000", color: "#fff", 
                         maxHeight: "25vh", minHeight: "4.5vh"}} as={"textarea"} rows={3} placeholder="Message" name="message" />
                     </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check Me" required/>
+                        <Form.Check type="checkbox" label="Check Me" style={{color: "#fff"}} required/>
                     </Form.Group>
                     <OverlayTrigger
                         trigger='click'
