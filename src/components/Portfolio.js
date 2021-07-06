@@ -1,5 +1,6 @@
-import React from 'react';
+import { React } from 'react';
 import styled from 'styled-components';
+// import TouchableOpacity from 'react-native';
 import { Jumbotron as Container } from 'react-bootstrap';
 import { Row, Col, Button } from 'react-bootstrap';
 
@@ -31,7 +32,7 @@ const Styles = styled.div`
         font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
         margin: auto;
         margin-top: 8vh;
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         font-weight: 200;
         font-style: italic;
         letter-spacing: .04em;
@@ -86,7 +87,8 @@ const Styles = styled.div`
         padding: 0;
         margin-top: 3vw;
         margin-bottom: 3vw;
-        outline: none;
+        outline: none!;
+        point-events: none;
     }
 
     .description {
@@ -94,31 +96,46 @@ const Styles = styled.div`
         resizeMode: 'contain'
         top: 0;
         bottom: 0;
-        margin-bottom: 3vw;
-        border: 2px solid black;
-        height: 14vw;
-        width: 14vw;
+        // margin-bottom: 3vw;
+        margin-bottom: 3.03vw;
+        // margin-right: 0.2vw;
+        // margin-right: .13vw;
+        // border: 2px solid black;
+        border: 1px solid black;
+        // border: 0;
+        // height: 69.7%;
+        // width: 62.7%;
+        height: 13.92vw;
+        // height: 14vw;
+        width: 13.92vw;
+        // width: 14vw;
         background: #C4C4C4;
         color: #fff;
         visibility: hidden;
         opacity: 0;
         text-align: left;
-        padding: 1vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
         font-size: 1.6vw;
       
         /* transition effect. not necessary */
         transition: opacity .5s, visibility .5s;
       }
 
-      .description-sm {
+    .description-sm {
         position: absolute;
         resizeMode: 'contain'
         top: 0;
         bottom: 0;
-        margin-bottom: 3vw;
-        border: 2px solid black;
-        height: 14vw;
-        width: 14vw;
+        // margin-bottom: 3vw;
+        margin-bottom: 3.05vw;
+        // border: 2px solid black;
+        border: 1px solid black;
+        // border: 0;
+        height: 13.88vw;
+        // height: 14vw;
+        width: 13.92vw;
+        // width: 14vw;
         background: #C4C4C4;
         color: #fff;
         visibility: hidden;
@@ -126,20 +143,28 @@ const Styles = styled.div`
         text-align: left;
         padding: 1vw;
         font-size: 1.2vw;
-      
+        
         /* transition effect. not necessary */
         transition: opacity .5s, visibility .5s;
-      }
-      
-      #investment-button:hover .description {
-        visibility: visible;
-        opacity: 1;
-      }
+    }
 
-      #investment-button:hover .description-sm {
+    #investment-button:focus {
+        box-shadow: none;
+    }
+
+    #investment-button-black:focus {
+        box-shadow: none;
+    }
+    
+    #investment-button:hover .description {
         visibility: visible;
         opacity: 1;
-      }
+    }
+
+    #investment-button:hover .description-sm {
+        visibility: visible;
+        opacity: 1;
+    }
 
     #investment-button-black {
         height: 14vw;
@@ -182,21 +207,23 @@ export const Portfolio = () => (
         <Container fluid id="investment-section">
             <Row>
                 <Col id="mycenter">
+                    {/* <TouchableOpacity disabled={true}> */}
                     <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={stripe} alt='Stripe' />
-                        <p className="description">A fully integrated suite of payment products</p>
+                        <p className="description" style={{paddingTop: '3vw'}}>A fully integrated suite of payment products</p>
                     </Button>
+                    {/* </TouchableOpacity> */}
                 </Col>
                 <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark" style={{outline: 'none'}}>
+                    <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={kraken} alt='Kraken' />
-                        <p className="description">Buy, sell, and trade digital currency</p>
+                        <p className="description" style={{paddingTop: '3vw'}}>Buy, sell, and trade digital currency</p>
                     </Button> 
                 </Col>
                 <Col id="mycenter">
                     <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={bytedance} alt='ByteDance' />
-                        <p className="description">Multinational internet technology company</p>
+                        <p className="description" style={{paddingTop: '1.8vw'}}>Multinational internet technology company</p>
                     </Button> 
                 </Col>
             </Row>
@@ -204,19 +231,19 @@ export const Portfolio = () => (
                 <Col id="mycenter">
                     <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={cloverhealth} alt='Clover Health' />
-                        <p className="description-sm">Preferred Provider Organization (PPO) & a Health Maintenance Organization (HMO) with a Medicare contract</p>
+                        <p className="description-sm" style={{paddingTop: '1.45vw'}}>Preferred Provider Organization (PPO) & a Health Maintenance Organization (HMO) with a Medicare contract</p>
                     </Button> 
                 </Col>
                 <Col id="mycenter">
                     <Button id="investment-button-black" variant="outline-dark">
                         <img id="investment" src={otis} alt='Otis' />
-                        <p className="description">Stock market for culture</p>
+                        <p className="description" style={{paddingTop: '4vw'}}>Stock market for culture</p>
                     </Button> 
                 </Col>
                 <Col id="mycenter">
                     <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={coinbase} alt='Coinbase' />
-                        <p className="description">Buy, sell, and trade digital currency</p>
+                        <p className="description" style={{paddingTop: '3vw'}}>Buy, sell, and trade digital currency</p>
                     </Button> 
                 </Col>
             </Row>
@@ -224,19 +251,19 @@ export const Portfolio = () => (
                 <Col id="mycenter">
                     <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={instacart} alt='Instacart' />
-                        <p className="description">Grocery pickup and delivery service</p>
+                        <p className="description" style={{paddingTop: '3vw'}}>Grocery pickup and delivery service</p>
                     </Button> 
                 </Col>
                 <Col id="mycenter">
                     <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={moti} alt='Moti' />
-                        <p className="description">E-cigarettes company</p>
+                        <p className="description" style={{paddingTop: '4vw'}}>E-cigarettes company</p>
                     </Button> 
                 </Col>
                 <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark">
+                    <Button id="investment-button" variant="outline-dark" >
                         <img id="investment" src={ramp} alt='Ramp' />
-                        <p className="description">Corporate card and spend management platform</p>
+                        <p className="description" style={{paddingTop: '1.8vw'}}>Corporate card and spend management platform</p>
                     </Button> 
                 </Col>
             </Row>

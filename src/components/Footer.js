@@ -1,12 +1,12 @@
 import React from 'react';
-import { Nav, Navbar, Form, Button, Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Navbar, Form, Button, Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
 
 import "../../node_modules/jquery/dist/jquery.min.js";
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
-import logo from '../assets/logo-lettering-white-highres.png';
+// import logo from '../assets/logo-lettering-white-highres.png';
 
 const Styles = styled.div`
     

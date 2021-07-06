@@ -6,7 +6,7 @@ import { Row, Col, Button } from 'react-bootstrap';
 import jeff from '../assets/team/jeffrey.png';
 import connor from '../assets/team/connor.jpg';
 import matt from '../assets/team/matt.jpg';
-import eva from '../assets/team/eva.jpg';
+// import eva from '../assets/team/eva.jpg';
 
 const Styles = styled.div`
 
@@ -44,7 +44,7 @@ const Styles = styled.div`
     #name {
         font-family: 'Noto Sans 400', sans-serif; 
         font-size: 1.8vw;
-        font-weight: lighter;
+        font-weight: 100;
     }
 
     #member-button {

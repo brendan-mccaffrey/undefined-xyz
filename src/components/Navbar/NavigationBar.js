@@ -26,7 +26,7 @@ const Styles = styled.div`
 
     .navbar-brand>img {
         margin-top: -10px;
-        width: min(36vw, 360px);
+        width: min(34vw, 340px);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -35,8 +35,8 @@ const Styles = styled.div`
 
     #myitem {
         padding-top: 2.5vh;
-        padding-left: 2vw;
-        padding-right: 2vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
         color: #000;
         justify-content: flex-end;
     }
@@ -55,8 +55,8 @@ const Styles = styled.div`
     .navbar-light .navbar-nav .nav-link {
         color: #000;
         font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
-        font-weight: 400;  
-        font-size: 1.1vw;
+        font-weight: 600;  
+        font-size: 1.2vw;
         align-items: center;  
     } 
 

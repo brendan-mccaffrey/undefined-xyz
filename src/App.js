@@ -23,17 +23,22 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // document.addEventListener("click", this.setState({landing: false}));
+    
+    // window.addEventListener("load", function(this){
+    //   console.log("Loaded");
+    //   document.addEventListener("click", this.setState({landing: false}));
+    // })
+    
     setTimeout(() => {
       this.setState({landing: false});
-    }, 5000); // 1000ms = 1 second
+    }, 3000); // 1000ms = 1 second
   }
 
   render() {
 
     if (this.state.landing) {
       return (
-        <React.Fragment>
+        <React.Fragment id="landing-jsn">
           <Landing/>
         </React.Fragment>
       )
