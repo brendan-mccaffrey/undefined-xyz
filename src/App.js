@@ -18,7 +18,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      landing: true
+      landing: false
     }
   }
 
@@ -29,9 +29,9 @@ class App extends Component {
     //   document.addEventListener("click", this.setState({landing: false}));
     // })
     
-    setTimeout(() => {
-      this.setState({landing: false});
-    }, 3000); // 1000ms = 1 second
+    // setTimeout(() => {
+    //   this.setState({landing: false});
+    // }, 3000); // 1000ms = 1 second
   }
 
   render() {

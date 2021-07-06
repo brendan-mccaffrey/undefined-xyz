@@ -21,20 +21,25 @@ const Styles = styled.div`
     #portfolio-header {
         color: #000;
         font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
-        font-size: 3em;
+        // font-size: 3em;
+        font-size: 2.5vw;
         font-weight: 505; 
-        margin-left: 4vw;
+        margin-left: 7.7vw;
         margin-top: 3vh;
     }
 
     #portfolio-statement {
         color: #000;
-        font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
+        font-family: 'Noto Sans 400 Italic 400', sans-serif;
+        font-size: min(1.3em, 1.6vw);
+        font-style: italic;
+        font-weight: lighter;
+        // font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+        // font-size: 1.7rem;
+        // font-weight: 200;
+        // font-style: italic; 
         margin: auto;
         margin-top: 8vh;
-        font-size: 1.7rem;
-        font-weight: 200;
-        font-style: italic;
         letter-spacing: .04em;
     }
 
@@ -54,15 +59,15 @@ const Styles = styled.div`
         font-family: 'Noto Sans 400', sans-serif; 
         font-size: 1.8em;
         font-weight: 100;
-        margin-left: 4vw;
+        margin-left: 7.7vw;
         margin-top: 3vh;
         margin-bottom: 4vh;
     }
 
     #investment-section {
-        background: #E5E5E5;
+        background: #DBDBDB;
         width: 105vw;
-        margin-left: -6vw;
+        margin-left: -3.5vw;
         margin-right: -10vw;
         padding-top: 2vh;
         padding-bottom: 2vh;

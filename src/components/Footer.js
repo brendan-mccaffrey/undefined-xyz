@@ -1,12 +1,13 @@
 import React from 'react';
-import { Navbar, Form, Button, Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Nav, Navbar, Form, Button, Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
 import styled from 'styled-components';
 import emailjs from 'emailjs-com';
+import { MDBContainer } from "mdbreact";
 
 import "../../node_modules/jquery/dist/jquery.min.js";
 import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
-// import logo from '../assets/logo-lettering-white-highres.png';
+import logo from '../assets/logo-0-white-highres.png';
 
 const Styles = styled.div`
     
@@ -67,7 +68,7 @@ const Styles = styled.div`
 
     @media (max-width: 991px) {
         .navbar-brand {
-            height: 80px; // Logo will not overhang
+            height: 30px; // Logo will not overhang
         }
         
         .navbar-toggle {
@@ -78,6 +79,16 @@ const Styles = styled.div`
     #myform {
         // margin-right: 5vw;
         margin-bottom: 10vh;
+    }
+
+    .navbar-brand>img {
+        margin-top: 25vh;
+        margin-left: .6vw;
+        width: min(12vw, 120px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
     }
 
     #contact-header {
@@ -96,6 +107,10 @@ const Styles = styled.div`
         border-radius: 0;
     }
 
+    #mycopyright {
+        background-color: #000;
+    }
+
 `;
 
 const popover = (
@@ -108,25 +123,25 @@ export const Footer = () => (
     <Styles>
         <div id="contact">
             <Navbar collapseOnSelect expand="lg"> 
-                {/* <Navbar.Collapse>
+                <Navbar.Collapse>
                     <Nav>
                         <Navbar.Brand href="/">
-                            <img src={logo} alt="Undefined"/>
+                            <img id="bottom-logo" src={logo} alt="Undefined"/>
                         </Navbar.Brand>
                     </Nav>
-                </Navbar.Collapse> */}
+                </Navbar.Collapse>
                 <Form className="ml-auto" id="myform" onSubmit={sendEmail}>
                     <h1 id="contact-header">Contact Us</h1>
-                    <Form.Group as={Row}>
+                    <Form.Group as={Row} style={{marginBottom: '1.6vw', marginTop: '.8vw'}}>
                         <Col><Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} placeholder="First Name" name="first_name" /></Col>
                         <Col><Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} placeholder="Last Name" name="last_name" /></Col>
                     </Form.Group>
-                    <Form.Group controlId="formGroupEmail">
+                    <Form.Group controlId="formGroupEmail" style={{marginBottom: '1.6vw'}}>
                         <Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} type="email" name="email" placeholder="Email Address" />
                     </Form.Group>
                     <Form.Group controlId="formGroupTextarea">
                         <Form.Control style={{border: "1px solid white", background: "#000", color: "#fff", 
-                        maxHeight: "25vh", minHeight: "4.5vh"}} as={"textarea"} rows={3} placeholder="Message" name="message" />
+                        maxHeight: "22vh", minHeight: "4.5vh"}} as={"textarea"} rows={3} placeholder="Message" name="message" />
                     </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Check Me" style={{color: "#fff"}} required/>
@@ -141,6 +156,11 @@ export const Footer = () => (
                     </OverlayTrigger>
                 </Form>
             </Navbar>
+            <div className="footer-copyright text-center py-3" id="mycopyright">
+                <MDBContainer id="mycopyright" fluid>
+                    &copy; {new Date().getFullYear()} Copyright: <a style={{color: 'inherit'}} href="https://undefined.xyz"> Undefined LLC </a>
+                </MDBContainer>
+            </div>
         </div>
     </Styles>
 )

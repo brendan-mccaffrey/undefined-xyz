@@ -14,6 +14,7 @@ const Styles = styled.div`
         margin-left: -.8vw;
         margin-right: -.8vw;
         margin-top: 17vh;
+        padding-top: 13vh;
         // position: relative;
         margin-bottom: 10vh;
         textAlign: center;

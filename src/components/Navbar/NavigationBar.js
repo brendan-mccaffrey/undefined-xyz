@@ -15,7 +15,7 @@ const Styles = styled.div`
         background-color: #fff;
         height: 17vh;
         padding-left: 6vw;
-        padding-right: 10vw;
+        padding-right: 8vw;
         padding-bottom: 2vh;
     }
 
@@ -99,7 +99,7 @@ export const NavigationBar = () => (
             <Link to="contact"
                 smooth={true}
                 offset={-170}
-                duration={750}><Nav.Link id="myitem">CONTACT</Nav.Link></Link>
+                duration={750}><Nav.Link id="myitem" style={{paddingRight: '0'}}>CONTACT</Nav.Link></Link>
                 
                 {/* <Link className="link"
                     activeClass="active"
