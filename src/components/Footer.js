@@ -111,6 +111,11 @@ const Styles = styled.div`
         background-color: #000;
     }
 
+    #credit {
+        padding-top: 4vh;
+        font-size: 1vw;
+    }
+
 `;
 
 const popover = (
@@ -159,6 +164,9 @@ export const Footer = () => (
             <div className="footer-copyright text-center py-3" id="mycopyright">
                 <MDBContainer id="mycopyright" fluid>
                     &copy; {new Date().getFullYear()} Copyright: <a style={{color: 'inherit'}} href="https://undefined.xyz"> Undefined LLC </a>
+                </MDBContainer>
+                <MDBContainer fluid>
+                    Website by <a style={{color: 'inherit'}} href="https://github.com/brendan-mccaffrey"> Brendan McCaffrey </a>
                 </MDBContainer>
             </div>
         </div>

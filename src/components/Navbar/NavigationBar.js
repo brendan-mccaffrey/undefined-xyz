@@ -14,8 +14,10 @@ const Styles = styled.div`
     .navbar {
         background-color: #fff;
         height: 17vh;
-        padding-left: 6vw;
-        padding-right: 8vw;
+        // padding-left: 6vw;
+        // padding-right: 8vw;
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 2vh;
     }
 
@@ -25,12 +27,14 @@ const Styles = styled.div`
     }
 
     .navbar-brand>img {
-        margin-top: -10px;
+        margin-top: -1vh;
+        // margin-top: -10px;
         width: min(34vw, 340px);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         z-index: 30;
+        margin-left: 6vw;
     }
 
     #myitem {
@@ -42,31 +46,40 @@ const Styles = styled.div`
     }
 
     #myburger {
-        margin-top: 2vh;
+        // margin-top: 3vh;
+        margin: auto;
+        // position: absolute;
+        // justify-content: flex-end !important;
         max-height: 10vh;
-        max-width: 10vh
+        max-width: 10vh;
+
+        margin-right: 6vw;
     }
 
     #mycollapse {
         background-color: #fff;
         z-index: 20;
+        // margin-top: 1vh;
     }
 
     .navbar-light .navbar-nav .nav-link {
         color: #000;
         font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
-        font-weight: 600;  
-        font-size: 1.2vw;
-        align-items: center;  
+        font-weight: 600; 
+        // font-size: 1.2vw;
+        // font-size: 2vh; 
+        font-size: max(1.2vw, 2vh);
+        align-items: center; 
     } 
+
+    #mycollapse:show {
+        margin-top: 10vh;
+        height: 50vh;
+    }
 
     @media (max-width: 991px) {
         .navbar-brand {
             height: 80px; // Logo will not overhang
-        }
-        
-        .navbar-toggle {
-          margin-top: 0px; // Adjust toggle position
         }
       }
 
@@ -99,7 +112,7 @@ export const NavigationBar = () => (
             <Link to="contact"
                 smooth={true}
                 offset={-170}
-                duration={750}><Nav.Link id="myitem" style={{paddingRight: '0'}}>CONTACT</Nav.Link></Link>
+                duration={750}><Nav.Link id="myitem" style={{marginRight: '6vw'}}>CONTACT</Nav.Link></Link>
                 
                 {/* <Link className="link"
                     activeClass="active"

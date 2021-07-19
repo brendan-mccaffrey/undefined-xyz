@@ -21,8 +21,8 @@ const Styles = styled.div`
     #portfolio-header {
         color: #000;
         font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
-        // font-size: 3em;
-        font-size: 2.5vw;
+        font-size: 3em;
+        // font-size: 2.5vw;
         font-weight: 505; 
         margin-left: 7.7vw;
         margin-top: 3vh;
@@ -31,6 +31,7 @@ const Styles = styled.div`
     #portfolio-statement {
         color: #000;
         font-family: 'Noto Sans 400 Italic 400', sans-serif;
+        // font-family: Noto Sans;
         font-size: min(1.3em, 1.6vw);
         font-style: italic;
         font-weight: lighter;
@@ -66,19 +67,16 @@ const Styles = styled.div`
 
     #investment-section {
         background: #DBDBDB;
-        width: 105vw;
-        margin-left: -3.5vw;
-        margin-right: -10vw;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
         padding-left: 20vw;
         padding-right: 20vw;
     }
 
     #portfolio-section {
         background: #fff;
-        padding-top: 0;
-        margin-top:0;
+        padding: 0;
+        margin:0;
     }
 
     #investment {
@@ -108,8 +106,8 @@ const Styles = styled.div`
         // border: 2px solid black;
         border: 1px solid black;
         // border: 0;
-        // height: 69.7%;
-        // width: 62.7%;
+        // height: 69.3%;
+        // width: 66%;
         height: 13.92vw;
         // height: 14vw;
         width: 13.92vw;
@@ -140,7 +138,7 @@ const Styles = styled.div`
         height: 13.88vw;
         // height: 14vw;
         width: 13.92vw;
-        // width: 14vw;
+        width: 14vw;
         background: #C4C4C4;
         color: #fff;
         visibility: hidden;
@@ -164,11 +162,13 @@ const Styles = styled.div`
     #investment-button:hover .description {
         visibility: visible;
         opacity: 1;
+        resizeMode: 'contain';
     }
 
     #investment-button:hover .description-sm {
         visibility: visible;
         opacity: 1;
+        resizeMode: 'contain';
     }
 
     #investment-button-black {
@@ -183,15 +183,61 @@ const Styles = styled.div`
     #investment-button-black:hover .description {
         visibility: visible;
         opacity: 1;
-      }
+    }
+
+    @media (max-width: 786px) {
+        #portfolio-header {
+            color: #000;
+            font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
+            font-size: 2em;
+            // font-size: 2.5vw;
+            font-weight: 505; 
+            margin-left: 7.7vw;
+        }
+
+        #mymap {
+            flex: 1;
+            width: 80vw;
+            resizeMode: 'contain';
+        }
+
+        #portfolio-statement {
+            color: #000;
+            // font-family: 'Noto Sans 400 Italic 400', sans-serif;
+            font-family: Noto Sans;
+            font-size: min(1.6em, 2.5vw);
+            font-style: italic;
+            font-weight: lighter;
+            // font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+            // font-size: 1.7rem;
+            // font-weight: 200;
+            // font-style: italic; 
+            margin: auto;
+            margin-top: 4vh;
+            letter-spacing: .04em;
+        }
+
+        #investments-header {
+            color: #000;
+            // font-family: 'Noto Sans 400 Italic 400', sans-serif;
+            font-family: Noto Sans;
+            font-size: 1.3em;
+            font-weight: 100;
+            margin-left: 7.7vw;
+            margin-top: 1vh !importants;
+            margin-bottom: 3vh;
+        }
+
+        .stripe {
+            padding-top: 1vw !important;
+        }
+    }
 
     
 `
 
 export const Portfolio = () => (
-    
     <Styles>
-        {/* <div id="portfolio"> */}
         <h1 id="portfolio-header">Portfolio</h1>
         <Container id="portfolio-section">
             <div id="mycenter">
@@ -202,10 +248,6 @@ export const Portfolio = () => (
                     <img id="mymap" src={map} alt='map' />
                 </div>
             </div>
-
-            <div id="mycenter">
-                
-            </div>
         </Container>
         <div id="portfolio">
         <h2 id="investments-header">Select Investments</h2>
@@ -214,8 +256,8 @@ export const Portfolio = () => (
                 <Col id="mycenter">
                     {/* <TouchableOpacity disabled={true}> */}
                     <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={stripe} alt='Stripe' />
-                        <p className="description" style={{paddingTop: '3vw'}}>A fully integrated suite of payment products</p>
+                        <img id="investment" src={stripe} alt='Stripe' style={{margin: 'auto'}} />
+                        <p className="description stripe" style={{paddingTop: '2vw'}}>A fully integrated suite of payment products</p>
                     </Button>
                     {/* </TouchableOpacity> */}
                 </Col>
@@ -236,7 +278,7 @@ export const Portfolio = () => (
                 <Col id="mycenter">
                     <Button id="investment-button" variant="outline-dark">
                         <img id="investment" src={cloverhealth} alt='Clover Health' />
-                        <p className="description-sm" style={{paddingTop: '1.45vw'}}>Preferred Provider Organization (PPO) & a Health Maintenance Organization (HMO) with a Medicare contract</p>
+                        <p className="description-sm" style={{paddingTop: '1vw'}}>Preferred Provider Organization (PPO) & a Health Maintenance Organization (HMO) with a Medicare contract</p>
                     </Button> 
                 </Col>
                 <Col id="mycenter">

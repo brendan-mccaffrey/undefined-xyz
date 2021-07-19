@@ -16,20 +16,20 @@ const Styles = styled.div`
         font-size: 3em;
         font-weight: 505; 
         margin-left: 7.7vw;
-        margin-top: 10vh;
+        margin-top: 9vh;
     }
 
     #team-section {
         background: #fff;
-        width: 105vw;
+        width: 100vw;
         align: center;
-        margin-left: -3.5vw;
+        // margin-left: -3.5vw;
         // margin-right: -10vw;
-        margin-top: -4vh;
-        padding-top: 0vh;
+        margin-top: 3vh;
+        // padding-top: 6vh;
         padding-bottom: 2vh;
-        padding-left: 16vw;
-        padding-right: 16vw;
+        padding-left: 14vw;
+        padding-right: 14vw;
     }
 
     #mycenter {
@@ -55,9 +55,13 @@ const Styles = styled.div`
         width: 20vw;
         background: #fff;
         padding: 0;
-        margin-top: 5vw;
-        margin-bottom: -4vh;
+        // margin-top: 5vw;
+        margin-bottom: -3vh;
         
+    }
+
+    #team-row {
+        height: 26vw;
     }
 
     #mycenter:focus {
@@ -67,6 +71,38 @@ const Styles = styled.div`
     #member-button:focus {
         box-shadow: none;
     }
+
+    @media (max-width: 786px) {
+        #team-header {
+            color: #000;
+            font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
+            font-size: 2em;
+            // font-size: 2.5vw;
+            font-weight: 505; 
+            margin-left: 7.7vw;
+            margin-top: 6vh;
+        }
+
+        #name {
+            font-family: 'Noto Sans 400', sans-serif; 
+            font-size: 1.4vw;
+            font-weight: 100;
+            margin-top: 2vh;
+        }
+
+        #team-section {
+            background: #fff;
+            width: 100vw;
+            align: center;
+            // margin-left: -3.5vw;
+            // margin-right: -10vw;
+            margin-top: 3vh;
+            // padding-top: 6vh;
+            padding-bottom: 2vh;
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+    }
 `
 
 export const Team = () => (
@@ -74,7 +110,7 @@ export const Team = () => (
         <div id="team">
         <h1 id="team-header">Our Team</h1>
         <Container fluid id="team-section">
-            <Row>
+            <Row id="team-row">
                 <Col id="mycenter">
                     <Button href="https://www.linkedin.com/in/jeffrey-lo-6b54317/" id="member-button" variant="outline-none">
                         <img id="member" src={jeff} alt='Jeff' />
