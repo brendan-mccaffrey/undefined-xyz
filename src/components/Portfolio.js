@@ -101,7 +101,7 @@ const Styles = styled.div`
         bottom: 0;
         // margin-bottom: 3vw;
         margin-bottom: 3.03vw;
-        // margin-right: 0.2vw;
+        margin-right: 2.2vw;
         // margin-right: .13vw;
         // border: 2px solid black;
         border: 1px solid black;
@@ -160,14 +160,18 @@ const Styles = styled.div`
     }
     
     #investment-button:hover .description {
+        // visibility: visible;
+        // opacity: 1;
         visibility: visible;
-        opacity: 1;
+        opacity: .1;
         resizeMode: 'contain';
     }
 
     #investment-button:hover .description-sm {
-        visibility: visible;
-        opacity: 1;
+        // visibility: visible;
+        // opacity: 1;
+        visibility: hidden;
+        opacity: 0;
         resizeMode: 'contain';
     }
 
@@ -181,8 +185,10 @@ const Styles = styled.div`
     }
 
     #investment-button-black:hover .description {
-        visibility: visible;
-        opacity: 1;
+        // visibility: visible;
+        // opacity: 1;
+        visibility: hidden;
+        opacity: 0;
     }
 
     @media (max-width: 786px) {
@@ -254,63 +260,61 @@ export const Portfolio = () => (
         <Container fluid id="investment-section">
             <Row>
                 <Col id="mycenter">
-                    {/* <TouchableOpacity disabled={true}> */}
-                    <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={stripe} alt='Stripe' style={{margin: 'auto'}} />
-                        <p className="description stripe" style={{paddingTop: '2vw'}}>A fully integrated suite of payment products</p>
+                    <Button href="https://stripe.com/" id="investment-button" variant="outline-dark">
+                        <img id="investment" src={stripe} alt='Stripe'  style={{marginTop: '28%'}}/>
+                        {/* <p><a className="description stripe" style={{paddingTop: '2vw'}}>Stripe</a></p> */}
                     </Button>
-                    {/* </TouchableOpacity> */}
                 </Col>
                 <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={kraken} alt='Kraken' />
-                        <p className="description" style={{paddingTop: '3vw'}}>Buy, sell, and trade digital currency</p>
+                    <Button href="https://kraken.com" id="investment-button" variant="outline-dark">
+                        <img id="investment" src={kraken} alt='Kraken' style={{marginTop: '36%'}}/>
+                        {/* <p><a className="description" style={{paddingTop: '3vw'}} href="https://kraken.com">Kraken</a></p> */}
                     </Button> 
                 </Col>
                 <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={bytedance} alt='ByteDance' />
-                        <p className="description" style={{paddingTop: '1.8vw'}}>Multinational internet technology company</p>
-                    </Button> 
-                </Col>
-            </Row>
-            <Row>
-                <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={cloverhealth} alt='Clover Health' />
-                        <p className="description-sm" style={{paddingTop: '1vw'}}>Preferred Provider Organization (PPO) & a Health Maintenance Organization (HMO) with a Medicare contract</p>
-                    </Button> 
-                </Col>
-                <Col id="mycenter">
-                    <Button id="investment-button-black" variant="outline-dark">
-                        <img id="investment" src={otis} alt='Otis' />
-                        <p className="description" style={{paddingTop: '4vw'}}>Stock market for culture</p>
-                    </Button> 
-                </Col>
-                <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={coinbase} alt='Coinbase' />
-                        <p className="description" style={{paddingTop: '3vw'}}>Buy, sell, and trade digital currency</p>
+                    <Button href="https://www.bytedance.com/en/" id="investment-button" variant="outline-dark">
+                        <img id="investment" src={bytedance} alt='ByteDance' style={{marginTop: '26%'}}/>
+                        {/* <p className="description" style={{paddingTop: '1.8vw'}}>Multinational internet technology company</p> */}
                     </Button> 
                 </Col>
             </Row>
             <Row>
                 <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={instacart} alt='Instacart' />
-                        <p className="description" style={{paddingTop: '3vw'}}>Grocery pickup and delivery service</p>
+                    <Button href="https://www.cloverhealth.com/en/" id="investment-button" variant="outline-dark">
+                        <img id="investment" src={cloverhealth} alt='Clover Health' style={{marginTop: '27%'}}/>
+                        {/* <p className="description-sm" style={{paddingTop: '1vw'}}>Preferred Provider Organization (PPO) & a Health Maintenance Organization (HMO) with a Medicare contract</p> */}
                     </Button> 
                 </Col>
                 <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark">
-                        <img id="investment" src={moti} alt='Moti' />
-                        <p className="description" style={{paddingTop: '4vw'}}>E-cigarettes company</p>
+                    <Button href="https://www.withotis.com/" id="investment-button-black" variant="outline-dark">
+                        <img id="investment" src={otis} alt='Otis' style={{marginTop: '23%'}}/>
+                        {/* <p className="description" style={{paddingTop: '4vw'}}>Stock market for culture</p> */}
                     </Button> 
                 </Col>
                 <Col id="mycenter">
-                    <Button id="investment-button" variant="outline-dark" >
-                        <img id="investment" src={ramp} alt='Ramp' />
-                        <p className="description" style={{paddingTop: '1.8vw'}}>Corporate card and spend management platform</p>
+                    <Button href="https://www.coinbase.com/" id="investment-button" variant="outline-dark">
+                        <img id="investment" src={coinbase} alt='Coinbase' style={{marginTop: '36%'}}/>
+                        {/* <p className="description" style={{paddingTop: '3vw'}}>Buy, sell, and trade digital currency</p> */}
+                    </Button> 
+                </Col>
+            </Row>
+            <Row>
+                <Col id="mycenter">
+                    <Button href="https://www.instacart.com/" id="investment-button" variant="outline-dark">
+                        <img id="investment" src={instacart} alt='Instacart' style={{marginTop: '38%'}}/>
+                        {/* <p className="description" style={{paddingTop: '3vw'}}>Grocery pickup and delivery service</p> */}
+                    </Button> 
+                </Col>
+                <Col id="mycenter">
+                    <Button href="https://motiplanet.com/" id="investment-button" variant="outline-dark">
+                        <img id="investment" src={moti} alt='Moti' style={{marginTop: '23%'}}/>
+                        {/* <p className="description" style={{paddingTop: '4vw'}}>E-cigarettes company</p> */}
+                    </Button> 
+                </Col>
+                <Col id="mycenter">
+                    <Button href="https://ramp.com/" id="investment-button" variant="outline-dark" >
+                        <img id="investment" src={ramp} alt='Ramp' style={{marginTop: '36%'}}/>
+                        {/* <p className="description" style={{paddingTop: '1.8vw'}}>Corporate card and spend management platform</p> */}
                     </Button> 
                 </Col>
             </Row>

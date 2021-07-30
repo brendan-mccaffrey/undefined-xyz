@@ -94,8 +94,8 @@ const Styles = styled.div`
     #contact-header {
         color: #fff;
         font-family: 'Neue Haas Grotesk Display Pro', sans-serif; 
-        font-size: 3em;
-        font-weight: 505; 
+        font-size: 2.5em;
+        font-weight: 505;
         margin-top: 10vh;
     }
 
@@ -137,11 +137,11 @@ export const Footer = () => (
                 </Navbar.Collapse>
                 <Form className="ml-auto" id="myform" onSubmit={sendEmail}>
                     <h1 id="contact-header">Contact Us</h1>
-                    <Form.Group as={Row} style={{marginBottom: '1.6vw', marginTop: '.8vw'}}>
+                    <Form.Group as={Row} style={{marginBottom: 'max(1.6vw, 1.6vh)', marginTop: '.8vw'}}>
                         <Col><Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} placeholder="First Name" name="first_name" /></Col>
                         <Col><Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} placeholder="Last Name" name="last_name" /></Col>
                     </Form.Group>
-                    <Form.Group controlId="formGroupEmail" style={{marginBottom: '1.6vw'}}>
+                    <Form.Group controlId="formGroupEmail" style={{marginBottom: 'max(1.6vw, 1.6vh)'}}>
                         <Form.Control style={{border: "1px solid white", background: "#000", color: "#fff"}} type="email" name="email" placeholder="Email Address" />
                     </Form.Group>
                     <Form.Group controlId="formGroupTextarea">
@@ -165,8 +165,8 @@ export const Footer = () => (
                 <MDBContainer id="mycopyright" fluid>
                     &copy; {new Date().getFullYear()} Copyright: <a style={{color: 'inherit'}} href="https://undefined.xyz"> Undefined LLC </a>
                 </MDBContainer>
-                <MDBContainer fluid>
-                    Website by <a style={{color: 'inherit'}} href="https://github.com/brendan-mccaffrey"> Brendan McCaffrey </a>
+                <MDBContainer fluid mlauto>
+                    <a style={{color: 'inherit'}} href="https://github.com/brendan-mccaffrey"> + </a>
                 </MDBContainer>
             </div>
         </div>

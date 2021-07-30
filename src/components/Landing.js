@@ -23,7 +23,7 @@ const Styles = styled.div`
         width: max(25vw, 30vh);
         z-index: 30;
         margin: auto;
-        margin-top: 5vh;
+        margin-top: min(40%, 8vh);
     }
 `;
 
