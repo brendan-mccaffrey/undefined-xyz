@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/undefined-xyz/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/undefined-xyz/static/js/main.15ad494b.chunk.js",
-    "main.js.map": "/undefined-xyz/static/js/main.15ad494b.chunk.js.map",
+    "main.css": "/undefined-xyz/static/css/main.fa676de6.chunk.css",
+    "main.js": "/undefined-xyz/static/js/main.966c47ce.chunk.js",
+    "main.js.map": "/undefined-xyz/static/js/main.966c47ce.chunk.js.map",
     "runtime-main.js": "/undefined-xyz/static/js/runtime-main.22d70f91.js",
     "runtime-main.js.map": "/undefined-xyz/static/js/runtime-main.22d70f91.js.map",
-    "static/js/2.e157adb8.chunk.js": "/undefined-xyz/static/js/2.e157adb8.chunk.js",
-    "static/js/2.e157adb8.chunk.js.map": "/undefined-xyz/static/js/2.e157adb8.chunk.js.map",
+    "static/js/2.d7e9f47a.chunk.js": "/undefined-xyz/static/js/2.d7e9f47a.chunk.js",
+    "static/js/2.d7e9f47a.chunk.js.map": "/undefined-xyz/static/js/2.d7e9f47a.chunk.js.map",
     "static/js/3.41b00912.chunk.js": "/undefined-xyz/static/js/3.41b00912.chunk.js",
     "static/js/3.41b00912.chunk.js.map": "/undefined-xyz/static/js/3.41b00912.chunk.js.map",
     "index.html": "/undefined-xyz/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/undefined-xyz/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.e157adb8.chunk.js.LICENSE.txt": "/undefined-xyz/static/js/2.e157adb8.chunk.js.LICENSE.txt",
+    "static/css/main.fa676de6.chunk.css.map": "/undefined-xyz/static/css/main.fa676de6.chunk.css.map",
+    "static/js/2.d7e9f47a.chunk.js.LICENSE.txt": "/undefined-xyz/static/js/2.d7e9f47a.chunk.js.LICENSE.txt",
     "static/media/bytedance.68f58648.png": "/undefined-xyz/static/media/bytedance.68f58648.png",
     "static/media/clover-health.e0154006.jpeg": "/undefined-xyz/static/media/clover-health.e0154006.jpeg",
     "static/media/coinbase.a6b6ecf4.png": "/undefined-xyz/static/media/coinbase.a6b6ecf4.png",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.22d70f91.js",
-    "static/js/2.e157adb8.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.15ad494b.chunk.js"
+    "static/js/2.d7e9f47a.chunk.js",
+    "static/css/main.fa676de6.chunk.css",
+    "static/js/main.966c47ce.chunk.js"
   ]
 }
