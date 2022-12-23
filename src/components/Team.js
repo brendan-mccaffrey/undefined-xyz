@@ -4,6 +4,7 @@ import { Jumbotron as Container } from 'react-bootstrap';
 import { Row, Col, Button } from 'react-bootstrap';
 
 import jeff from '../assets/team/jeffrey.png';
+import brendan from '../assets/team/brendan.jpg';
 import connor from '../assets/team/connor.jpg';
 import matt from '../assets/team/matt.jpg';
 import eva from '../assets/team/eva.jpg';
@@ -108,16 +109,22 @@ const Styles = styled.div`
 export const Team = () => (
     <Styles>
         <div id="team">
-        <h1 id="team-header">Our Team</h1>
-        <Container fluid id="team-section">
-            <Row id="team-row">
-                <Col id="mycenter">
-                    <Button href="https://www.linkedin.com/in/jeffrey-lo-6b54317/" id="member-button" variant="outline-none">
-                        <img id="member" src={jeff} alt='Jeff' />
-                    </Button>
-                    <p id="name">JEFF LO</p>
-                </Col>
-                <Col id="mycenter">
+            <h1 id="team-header">Our Team</h1>
+            <Container fluid id="team-section">
+                <Row id="team-row">
+                    <Col id="mycenter">
+                        <Button href="https://www.linkedin.com/in/jeffrey-lo-6b54317/" id="member-button" variant="outline-none">
+                            <img id="member" src={jeff} alt='Jeff' />
+                        </Button>
+                        <p id="name">JEFF LO</p>
+                    </Col>
+                    <Col id="mycenter">
+                        <Button href="https://www.linkedin.com/in/brendan-mccaffrey/" id="member-button" variant="outline-none">
+                            <img id="member" src={brendan} alt='Brendan' />
+                        </Button>
+                        <p id="name">BRENDAN McCAFFREY</p>
+                    </Col>
+                    {/* <Col id="mycenter">
                     <Button href="https://www.linkedin.com/in/connorlin/" id="member-button" variant="outline-none">
                         <img id="member" src={connor} alt='Connor' />
                     </Button> 
@@ -128,29 +135,29 @@ export const Team = () => (
                         <img id="member" src={matt} alt='Matt' />
                     </Button>
                     <p id="name">MATT SHERMAN</p>
-                </Col>
-                {/* <Col id="mycenter">
+                </Col> */}
+                    {/* <Col id="mycenter">
                     <Button href="https://www.linkedin.com/in/eva-j-weng-34b16738/" id="member-button" variant="outline-none">
                         <img id="member" src={eva} alt='Eva' />
                     </Button> 
                     <p id="name">EVA WENG</p>
                 </Col>  */}
-            </Row>
-            <Row>
-                {/* <Col id="mycenter">
+                </Row>
+                <Row>
+                    {/* <Col id="mycenter">
                     <Button id="member-button" variant="outline-none">
                         <img id="member" src={matt} alt='Matt' />
                     </Button>
                     <p id="name">MATT SHERMAN</p>
                 </Col> */}
-                {/* <Col id="mycenter">
+                    {/* <Col id="mycenter">
                     <Button id="member-button" variant="outline-none">
                         <img id="member" src={eva} alt='Eva' />
                     </Button> 
                     <p id="name">EVA WENG</p>
                 </Col> */}
-            </Row>
-        </Container>
+                </Row>
+            </Container>
         </div>
     </Styles>
 )

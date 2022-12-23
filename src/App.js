@@ -15,54 +15,55 @@ import { Landing } from './components/Landing';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      landing: true
-    }
-  }
-
-  componentDidMount() {
-    
-    // window.addEventListener("load", function(this){
-    //   console.log("Loaded");
-    //   document.addEventListener("click", this.setState({landing: false}));
-    // })
-    
-    setTimeout(() => {
-      this.setState({landing: false});
-    }, 3000); // 1000ms = 1 second
-  }
-
-  render() {
-
-    if (this.state.landing) {
-      return (
-        <React.Fragment id="landing-jsn">
-          <Landing/>
-        </React.Fragment>
-      )
+    constructor(props) {
+        super(props);
+        this.state = {
+            landing: true
+        }
     }
 
+    componentDidMount() {
 
-    return (
-      <React.Fragment>
-        <NavigationBar/>
-        <Layout>
-          <Jumbotron/>
-          <Portfolio/>
-          <Team/>
-          <Router>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route component={NoMatch} />
-            </Switch>
-          </Router>
-        </Layout>
-        <Footer/>
-      </React.Fragment>
-    );
-  }
+        // window.addEventListener("load", function(this){
+        //   console.log("Loaded");
+        //   document.addEventListener("click", this.setState({landing: false}));
+        // })
+
+        setTimeout(() => {
+            this.setState({ landing: false });
+        }, 3000); // 1000ms = 1 second
+    }
+
+    render() {
+
+        // // This loads the temporary logo landing page
+        // if (this.state.landing) {
+        //   return (
+        //     <React.Fragment id="landing-jsn">
+        //       <Landing/>
+        //     </React.Fragment>
+        //   )
+        // }
+
+
+        return (
+            <React.Fragment>
+                <NavigationBar />
+                <Layout>
+                    <Jumbotron />
+                    <Portfolio />
+                    <Team />
+                    {/* <Router>
+                        <Switch>
+                            <Route exact path='/' component={Home} />
+                            <Route component={NoMatch} />
+                        </Switch>
+                    </Router> */}
+                </Layout>
+                <Footer />
+            </React.Fragment>
+        );
+    }
 }
 
 
